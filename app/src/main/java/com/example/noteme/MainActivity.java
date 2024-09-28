@@ -1,13 +1,17 @@
 package com.example.noteme;
 
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -17,6 +21,7 @@ import com.example.noteme.databinding.ActivityMainBinding;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -29,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
+// Find the add note button and set a click listener to open NewNoteActivity
+        FloatingActionButton fabAddNote = findViewById(R.id.fabAddNote);
+        fabAddNote.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, NewNoteActivity.class);
+            startActivity(intent);
+        });
     }
 
     @Override

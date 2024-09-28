@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoteMe"
         tools:targetApi="31">
+        <activity android:name=".NewNoteActivity"></activity>
         <activity
+
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.NoteMe">
@@ -21,7 +23,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+        </activity
+            >
     </application>
 
 </manifest>

@@ -1,0 +1,112 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#181818">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:contentDescription="Back"
+        android:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp"/>
+
+    <!-- Title TextView for "New Note" -->
+
+    <!-- Title EditText -->
+
+    <TextView
+        android:id="@+id/tvNewNoteTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="New Note"
+        android:textColor="#00ABE4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.388"
+        app:layout_constraintStart_toEndOf="@+id/ivBack"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/etTitle"
+        android:layout_width="376dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edit_text"
+        android:backgroundTint="#242424"
+        android:elevation="4dp"
+        android:hint="Title"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+    <!-- Subtitle EditText -->
+    <EditText
+        android:id="@+id/etSubtitle"
+        android:layout_width="372dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edit_text"
+        android:backgroundTint="#242424"
+        android:elevation="4dp"
+        android:hint="Description"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#888888"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTitle" />
+
+    <!-- Description EditText -->
+    <EditText
+        android:id="@+id/etDescription"
+        android:layout_width="372dp"
+        android:layout_height="598dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/rounded_edit_text"
+        android:backgroundTint="#242424"
+        android:elevation="4dp"
+        android:gravity="top"
+        android:hint="This note is about..."
+        android:minHeight="200dp"
+        android:textColor="#888888"
+        android:textColorHint="#888888"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveNote"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etSubtitle" />
+
+    <!-- Save Note Button -->
+    <Button
+        android:id="@+id/btnSaveNote"
+        android:layout_width="132dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="15dp"
+        android:backgroundTint="#00ABE4"
+        android:elevation="6dp"
+        android:text="Save Note"
+        android:textColor="#181818"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescription" />
+</androidx.constraintlayout.widget.ConstraintLayout>

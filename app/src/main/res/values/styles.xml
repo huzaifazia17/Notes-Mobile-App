@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Other styles -->
+
+    <!-- Custom style for the SearchView -->
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <item name="android:textColorHint">#888888</item> <!-- Set the desired hint text color -->
+        <item name="android:textColor">#FFFFFF</item> <!-- Set the text color when typing -->
+    </style>
+</resources>
